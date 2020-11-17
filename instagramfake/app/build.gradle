@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.instagram"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation "com.android.support:design:28.+"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //dependencias do firebase
+    // implementation 'com.google.firebase:firebase-analytics:16.4.4'
+    //  implementation 'com.google.firebase:firebase-core:16.4.4'
+    //  implementation 'com.google.firebase:firebase-database:16.3.1'
+    //  implementation 'com.google.firebase:firebase-storage:16.1.1'
+    //  implementation 'com.google.firebase:firebase-auth:16.3.2'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.google.firebase:firebase-storage:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.firebaseui:firebase-ui-storage:0.6.0'
+
+    //dependencias do botton navigation
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation "com.android.support:design:28.0.0"
+
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation 'com.android.support:design:28.0.0'
+
+    //dependencia da circle image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //dependencia filtros
+    implementation 'info.androidhive:imagefilters:1.0.7'
+
+    //dependencia da lib universal image load para o gridview do perfil
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //dependencia botão like e comentarios
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+
+}
